@@ -1,0 +1,632 @@
+PhASAR v0222
+A LLVM-based static analysis framework
+
+Handle normal flow
+Src: %3 = alloca i32, align 4, !psr.id !4 | ID: 0
+Dst: %4 = alloca i32, align 4, !psr.id !5 | ID: 1
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %4 = alloca i32, align 4, !psr.id !5 | ID: 1
+Dst: %5 = alloca i8**, align 8, !psr.id !6 | ID: 2
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %5 = alloca i8**, align 8, !psr.id !6 | ID: 2
+Dst: %6 = alloca i32, align 4, !psr.id !7 | ID: 3
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %6 = alloca i32, align 4, !psr.id !7 | ID: 3
+Dst: %7 = alloca i32, align 4, !psr.id !8 | ID: 4
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %7 = alloca i32, align 4, !psr.id !8 | ID: 4
+Dst: %8 = alloca i32, align 4, !psr.id !9 | ID: 5
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %8 = alloca i32, align 4, !psr.id !9 | ID: 5
+Dst: %9 = alloca i32, align 4, !psr.id !10 | ID: 6
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %9 = alloca i32, align 4, !psr.id !10 | ID: 6
+Dst: store i32 0, i32* %3, align 4, !psr.id !11 | ID: 7
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: store i32 0, i32* %3, align 4, !psr.id !11 | ID: 7
+Dst: store i32 %0, i32* %4, align 4, !psr.id !12 | ID: 8
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: store i32 %0, i32* %4, align 4, !psr.id !12 | ID: 8
+Dst: store i8** %1, i8*** %5, align 8, !psr.id !13 | ID: 9
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: store i8** %1, i8*** %5, align 8, !psr.id !13 | ID: 9
+Dst: %10 = load i32, i32* %4, align 4, !psr.id !14 | ID: 10
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %10 = load i32, i32* %4, align 4, !psr.id !14 | ID: 10
+Dst: store i32 %10, i32* %6, align 4, !psr.id !15 | ID: 11
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: store i32 %10, i32* %6, align 4, !psr.id !15 | ID: 11
+Dst: %11 = load i32, i32* %6, align 4, !psr.id !16 | ID: 12
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %11 = load i32, i32* %6, align 4, !psr.id !16 | ID: 12
+Dst: %12 = load i32, i32* %6, align 4, !psr.id !17 | ID: 13
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %12 = load i32, i32* %6, align 4, !psr.id !17 | ID: 13
+Dst: %13 = add nsw i32 %11, %12, !psr.id !18 | ID: 14
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %13 = add nsw i32 %11, %12, !psr.id !18 | ID: 14
+Dst: store i32 %13, i32* %7, align 4, !psr.id !19 | ID: 15
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: store i32 %13, i32* %7, align 4, !psr.id !19 | ID: 15
+Dst: %14 = load i32, i32* %7, align 4, !psr.id !20 | ID: 16
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %14 = load i32, i32* %7, align 4, !psr.id !20 | ID: 16
+Dst: %15 = load i32, i32* %6, align 4, !psr.id !21 | ID: 17
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %15 = load i32, i32* %6, align 4, !psr.id !21 | ID: 17
+Dst: %16 = mul nsw i32 %14, %15, !psr.id !22 | ID: 18
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %16 = mul nsw i32 %14, %15, !psr.id !22 | ID: 18
+Dst: store i32 %16, i32* %8, align 4, !psr.id !23 | ID: 19
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: store i32 %16, i32* %8, align 4, !psr.id !23 | ID: 19
+Dst: %17 = load i32, i32* %8, align 4, !psr.id !24 | ID: 20
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %17 = load i32, i32* %8, align 4, !psr.id !24 | ID: 20
+Dst: %18 = load i32, i32* %8, align 4, !psr.id !25 | ID: 21
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %18 = load i32, i32* %8, align 4, !psr.id !25 | ID: 21
+Dst: %19 = mul nsw i32 %17, %18, !psr.id !26 | ID: 22
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %19 = mul nsw i32 %17, %18, !psr.id !26 | ID: 22
+Dst: store i32 %19, i32* %9, align 4, !psr.id !27 | ID: 23
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: store i32 %19, i32* %9, align 4, !psr.id !27 | ID: 23
+Dst: %20 = load i32, i32* %9, align 4, !psr.id !28 | ID: 24
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %20 = load i32, i32* %9, align 4, !psr.id !28 | ID: 24
+Dst: ret i32 %20, !psr.id !29 | ID: 25
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Normal stabilized? --> 0
+Normal merged:
+
+Handle normal flow
+Src: %3 = alloca i32, align 4, !psr.id !4 | ID: 0
+Dst: %4 = alloca i32, align 4, !psr.id !5 | ID: 1
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %4 = alloca i32, align 4, !psr.id !5 | ID: 1
+Dst: %5 = alloca i8**, align 8, !psr.id !6 | ID: 2
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %4 = alloca i32, align 4, !psr.id !5 | ID: 1
+Dst: %5 = alloca i8**, align 8, !psr.id !6 | ID: 2
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %5 = alloca i8**, align 8, !psr.id !6 | ID: 2
+Dst: %6 = alloca i32, align 4, !psr.id !7 | ID: 3
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %5 = alloca i8**, align 8, !psr.id !6 | ID: 2
+Dst: %6 = alloca i32, align 4, !psr.id !7 | ID: 3
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %6 = alloca i32, align 4, !psr.id !7 | ID: 3
+Dst: %7 = alloca i32, align 4, !psr.id !8 | ID: 4
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %6 = alloca i32, align 4, !psr.id !7 | ID: 3
+Dst: %7 = alloca i32, align 4, !psr.id !8 | ID: 4
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %7 = alloca i32, align 4, !psr.id !8 | ID: 4
+Dst: %8 = alloca i32, align 4, !psr.id !9 | ID: 5
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %7 = alloca i32, align 4, !psr.id !8 | ID: 4
+Dst: %8 = alloca i32, align 4, !psr.id !9 | ID: 5
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %8 = alloca i32, align 4, !psr.id !9 | ID: 5
+Dst: %9 = alloca i32, align 4, !psr.id !10 | ID: 6
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %8 = alloca i32, align 4, !psr.id !9 | ID: 5
+Dst: %9 = alloca i32, align 4, !psr.id !10 | ID: 6
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %9 = alloca i32, align 4, !psr.id !10 | ID: 6
+Dst: store i32 0, i32* %3, align 4, !psr.id !11 | ID: 7
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %9 = alloca i32, align 4, !psr.id !10 | ID: 6
+Dst: store i32 0, i32* %3, align 4, !psr.id !11 | ID: 7
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 0, i32* %3, align 4, !psr.id !11 | ID: 7
+Dst: store i32 %0, i32* %4, align 4, !psr.id !12 | ID: 8
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 0, i32* %3, align 4, !psr.id !11 | ID: 7
+Dst: store i32 %0, i32* %4, align 4, !psr.id !12 | ID: 8
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %0, i32* %4, align 4, !psr.id !12 | ID: 8
+Dst: store i8** %1, i8*** %5, align 8, !psr.id !13 | ID: 9
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %0, i32* %4, align 4, !psr.id !12 | ID: 8
+Dst: store i8** %1, i8*** %5, align 8, !psr.id !13 | ID: 9
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i8** %1, i8*** %5, align 8, !psr.id !13 | ID: 9
+Dst: %10 = load i32, i32* %4, align 4, !psr.id !14 | ID: 10
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i8** %1, i8*** %5, align 8, !psr.id !13 | ID: 9
+Dst: %10 = load i32, i32* %4, align 4, !psr.id !14 | ID: 10
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %10 = load i32, i32* %4, align 4, !psr.id !14 | ID: 10
+Dst: store i32 %10, i32* %6, align 4, !psr.id !15 | ID: 11
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %10 = load i32, i32* %4, align 4, !psr.id !14 | ID: 10
+Dst: store i32 %10, i32* %6, align 4, !psr.id !15 | ID: 11
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %10, i32* %6, align 4, !psr.id !15 | ID: 11
+Dst: %11 = load i32, i32* %6, align 4, !psr.id !16 | ID: 12
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %10, i32* %6, align 4, !psr.id !15 | ID: 11
+Dst: %11 = load i32, i32* %6, align 4, !psr.id !16 | ID: 12
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %11 = load i32, i32* %6, align 4, !psr.id !16 | ID: 12
+Dst: %12 = load i32, i32* %6, align 4, !psr.id !17 | ID: 13
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %11 = load i32, i32* %6, align 4, !psr.id !16 | ID: 12
+Dst: %12 = load i32, i32* %6, align 4, !psr.id !17 | ID: 13
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %12 = load i32, i32* %6, align 4, !psr.id !17 | ID: 13
+Dst: %13 = add nsw i32 %11, %12, !psr.id !18 | ID: 14
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %12 = load i32, i32* %6, align 4, !psr.id !17 | ID: 13
+Dst: %13 = add nsw i32 %11, %12, !psr.id !18 | ID: 14
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %13 = add nsw i32 %11, %12, !psr.id !18 | ID: 14
+Dst: store i32 %13, i32* %7, align 4, !psr.id !19 | ID: 15
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %13 = add nsw i32 %11, %12, !psr.id !18 | ID: 14
+Dst: store i32 %13, i32* %7, align 4, !psr.id !19 | ID: 15
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %13, i32* %7, align 4, !psr.id !19 | ID: 15
+Dst: %14 = load i32, i32* %7, align 4, !psr.id !20 | ID: 16
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %13, i32* %7, align 4, !psr.id !19 | ID: 15
+Dst: %14 = load i32, i32* %7, align 4, !psr.id !20 | ID: 16
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %14 = load i32, i32* %7, align 4, !psr.id !20 | ID: 16
+Dst: %15 = load i32, i32* %6, align 4, !psr.id !21 | ID: 17
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %14 = load i32, i32* %7, align 4, !psr.id !20 | ID: 16
+Dst: %15 = load i32, i32* %6, align 4, !psr.id !21 | ID: 17
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %15 = load i32, i32* %6, align 4, !psr.id !21 | ID: 17
+Dst: %16 = mul nsw i32 %14, %15, !psr.id !22 | ID: 18
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %15 = load i32, i32* %6, align 4, !psr.id !21 | ID: 17
+Dst: %16 = mul nsw i32 %14, %15, !psr.id !22 | ID: 18
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %16 = mul nsw i32 %14, %15, !psr.id !22 | ID: 18
+Dst: store i32 %16, i32* %8, align 4, !psr.id !23 | ID: 19
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %16 = mul nsw i32 %14, %15, !psr.id !22 | ID: 18
+Dst: store i32 %16, i32* %8, align 4, !psr.id !23 | ID: 19
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %16, i32* %8, align 4, !psr.id !23 | ID: 19
+Dst: %17 = load i32, i32* %8, align 4, !psr.id !24 | ID: 20
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %16, i32* %8, align 4, !psr.id !23 | ID: 19
+Dst: %17 = load i32, i32* %8, align 4, !psr.id !24 | ID: 20
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %17 = load i32, i32* %8, align 4, !psr.id !24 | ID: 20
+Dst: %18 = load i32, i32* %8, align 4, !psr.id !25 | ID: 21
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %17 = load i32, i32* %8, align 4, !psr.id !24 | ID: 20
+Dst: %18 = load i32, i32* %8, align 4, !psr.id !25 | ID: 21
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %18 = load i32, i32* %8, align 4, !psr.id !25 | ID: 21
+Dst: %19 = mul nsw i32 %17, %18, !psr.id !26 | ID: 22
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %18 = load i32, i32* %8, align 4, !psr.id !25 | ID: 21
+Dst: %19 = mul nsw i32 %17, %18, !psr.id !26 | ID: 22
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %19 = mul nsw i32 %17, %18, !psr.id !26 | ID: 22
+Dst: store i32 %19, i32* %9, align 4, !psr.id !27 | ID: 23
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %19 = mul nsw i32 %17, %18, !psr.id !26 | ID: 22
+Dst: store i32 %19, i32* %9, align 4, !psr.id !27 | ID: 23
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %19, i32* %9, align 4, !psr.id !27 | ID: 23
+Dst: %20 = load i32, i32* %9, align 4, !psr.id !28 | ID: 24
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: store i32 %19, i32* %9, align 4, !psr.id !27 | ID: 23
+Dst: %20 = load i32, i32* %9, align 4, !psr.id !28 | ID: 24
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %20 = load i32, i32* %9, align 4, !psr.id !28 | ID: 24
+Dst: ret i32 %20, !psr.id !29 | ID: 25
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+Handle normal flow
+Src: %20 = load i32, i32* %9, align 4, !psr.id !28 | ID: 24
+Dst: ret i32 %20, !psr.id !29 | ID: 25
+
+Normal Out[Ctx]:
+
+Analysis[Dst][Ctx]:
+
+Handle ret flow in: main
+Src: ret i32 %20, !psr.id !29 | ID: 25
+Dst: call void @__psrCRuntimeGlobalDtorsModel() | ID: -1
+CTXRm: Call string: [  ]
+ResSites.size(): 1
+RetSite: call void @__psrCRuntimeGlobalDtorsModel() | ID: -1
+Return facts: 
+RetSite facts: 
+Ret stabilized? --> 0
+Merged to: 
