@@ -36,11 +36,14 @@ private:
 public:
   SolverResults(Table<N, D, L> &ResTab, D ZV) : Results(ResTab), ZV(ZV) {}
 
-  L resultAt(N Stmt, D Node) const { return Results.get(Stmt, Node); }
+  L resultAt(N Stmt, D Node) const { 
+    std::cout<<Stmt<<" \n";
+    return Results.get(Stmt, Node); 
+    }
 
   std::unordered_map<D, L> resultsAt(N Stmt, bool StripZero = false) const 
   {
-    std::cout<<Stmt<<" ";
+    std::cout<<Stmt<<" \n";
     std::unordered_map<D, L> Result = Results.row(Stmt);
     if (StripZero) {
       for (auto It = Result.begin(); It != Result.end();) {
